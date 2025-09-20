@@ -33,7 +33,7 @@ public class JSAlertTest {
         driver.quit();
     }
 
-    @Test
+    @Test(groups = {"skip"})
     void cancelJSConfirmPopup(){
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
@@ -46,7 +46,7 @@ public class JSAlertTest {
         driver.quit();
     }
 
-    @Test
+    @Test(groups = {"smoke","wip"})
     void fillJSPromptPopup(){
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");

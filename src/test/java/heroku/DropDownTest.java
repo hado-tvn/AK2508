@@ -52,6 +52,5 @@ public class DropDownTest {
         Assert.assertFalse(driver.findElement(By.xpath("//option[.='Grape']")).isSelected());
 
         driver.quit();
-
     }
 }

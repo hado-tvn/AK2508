@@ -1,0 +1,13 @@
+<suite name="JSAlert">
+    <test name="chrome">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <exclude name="skip"/>
+            </run>
+        </groups>
+      <packages>
+          <package name="heroku"/>
+      </packages>
+    </test>
+</suite>

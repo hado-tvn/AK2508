@@ -1,0 +1,9 @@
+<suite name="Vietnam airline Booking page">
+    <test name="Verify depart date">
+        <parameter name="browser" value="fire"/>
+        <classes>
+            <class name="flight.DatePickerTest"/>
+        </classes>
+    </test>
+
+</suite>
