@@ -20,6 +20,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Compile
-      run: mvn clean compile
+      run: mvn clean test
 #    - name: Run E2E Test
 #      run: mvn clean test

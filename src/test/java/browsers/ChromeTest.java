@@ -21,7 +21,6 @@ import java.util.Optional;
 
 
 public class ChromeTest {
-
     @Test
     public void normalModeTest() {
         WebDriver driver = new ChromeDriver();
@@ -157,8 +156,4 @@ public class ChromeTest {
             System.out.println(m.getName() + " = " + m.getValue());
         }
     }
-
-
-
-
 }
