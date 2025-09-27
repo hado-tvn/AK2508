@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,6 +21,7 @@ import java.util.List;
 public class Browser {
     private static WebDriver driver;
     public static WebDriverWait wait;
+    public static Actions actions;
 
     public static void launch(String browser) {
         switch (browser.toLowerCase()) {
@@ -42,6 +44,7 @@ public class Browser {
             default -> throw new IllegalStateException("Unexpected value: " + browser);
         }
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        actions = new Actions(driver);
     }
 
     public static void visit(String url) {
@@ -114,6 +117,11 @@ public class Browser {
 
     public static boolean isEnabled(By locator) {
         return find(locator).isEnabled();
+    }
+    public static void dragAndDrop(By source, By target){
+        actions
+                .dragAndDrop(find(source),find(target))
+                .perform();
     }
 
 }
